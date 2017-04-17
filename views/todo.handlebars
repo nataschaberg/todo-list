@@ -1,0 +1,24 @@
+<h1>todo list for poets</h1>
+<div id="todo-table">
+  <form>
+    <input type="text" name="item" placeholder="Add new item..." required />
+    <button type="submit">Add new Item</button>
+  </form>
+  <div class="todo-list">
+    <div>
+      {{#each todos}}
+      <b>{{item}}</b>
+      <p class="analyse">
+        <!-- {{#if "'avScore' > '0'"}}
+        <i class="fa fa-smile-o" aria-hidden="true"></i>
+        {{else}}
+        <i class="fa fa-frown-o" aria-hidden="true"></i>
+        {{/if}} -->
+         average score: {{avScore}} ||
+          {{#each words}}
+            <strong>{{word}}({{score}}) </strong>
+          {{/each}}
+       </p>
+      {{/each}}
+  </div>
+</div>
